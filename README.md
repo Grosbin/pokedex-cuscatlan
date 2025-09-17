@@ -1,19 +1,33 @@
-# 🔥 Pokémon Trainer App
+# 🔥 Pokémon Cuscatlán
 
-A comprehensive Android application built with Kotlin and Jetpack Compose that allows users to become Pokémon trainers by creating profiles and selecting their team from the first generation of Pokémon.
+A comprehensive **cross-platform mobile application** with **Android** and **iOS** implementations that allows users to become Pokémon trainers by creating profiles and selecting their team from the first generation of Pokémon.
+
+## 📱 Platform Support
+
+- **Android**: Built with Kotlin and Jetpack Compose
+- **iOS**: Built with Swift and SwiftUI
 
 ## 🏗️ Architecture
 
-The application follows modern Android development practices with:
+Both applications follow modern mobile development practices:
 
+### Android Architecture
 - **MVVM (Model-View-ViewModel)** architecture pattern
 - **Clean Architecture** principles with separation of concerns
 - **Modular structure** for scalability and maintainability
 - **Dependency Injection** using Dagger Hilt
 - **Reactive Programming** with Kotlin Flows and StateFlow
 
+### iOS Architecture
+- **MVVM (Model-View-ViewModel)** architecture pattern
+- **Clean Architecture** principles with separation of concerns
+- **Modular structure** for scalability and maintainability
+- **Dependency Injection** using custom container pattern
+- **Reactive Programming** with Combine framework
+
 ## 🛠️ Tech Stack
 
+### Android
 - **Language**: Kotlin
 - **UI Framework**: Jetpack Compose
 - **Dependency Injection**: Dagger Hilt
@@ -23,13 +37,23 @@ The application follows modern Android development practices with:
 - **Navigation**: Navigation Compose
 - **Architecture**: MVVM + Clean Architecture
 
+### iOS
+- **Language**: Swift
+- **UI Framework**: SwiftUI
+- **Networking**: URLSession + Combine
+- **Serialization**: Codable
+- **Image Loading**: AsyncImage
+- **Navigation**: NavigationStack
+- **Architecture**: MVVM + Clean Architecture
+
 ## ✨ Features
 
 ### 📋 Trainer Profile Configuration
-- **Photo Upload**: Camera or gallery photo selection (required)
-- **Personal Information**: Name (required), favorite hobby, birth date (required)
-- **Identification Validation**: 
-  - DUI validation for adults (18+) with format checking and auto-hyphen insertion
+- **Photo Upload**: Camera or gallery photo selection (optional)
+- **Personal Information**: Name (required), favorite hobby (optional), birth date (required)
+- **Identification Validation**:
+  - **Android**: DUI validation for adults (18+) with format checking and auto-hyphen insertion
+  - **iOS**: Simplified numeric DUI validation for adults (18+), no specific format required
   - Minor ID optional for users under 18
 - **Real-time Validation**: Form validation with error messages
 - **Age Calculation**: Automatic age calculation from birth date
@@ -59,18 +83,27 @@ Accurate stat representation with proper maximum values:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
+#### For Android Development
 - Android Studio Arctic Fox or newer
 - Android SDK API 21+ (Android 5.0+)
 - Kotlin 1.9+
+
+#### For iOS Development
+- Xcode 15.0 or newer
+- iOS 16.0+
+- Swift 5.9+
+- macOS Monterey or newer
 
 ### Installation
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/pokemon-trainer-app.git
-cd pokemon-trainer-app
+git clone https://github.com/Grosbin/pokemon-cuscatlan
+cd pokemon-cuscatlan
 ```
 
+#### Android Setup
 2. **Open in Android Studio**
    - Open Android Studio
    - Select "Open an existing Android Studio project"
@@ -80,6 +113,16 @@ cd pokemon-trainer-app
    - Wait for Gradle sync to complete
    - Click the "Run" button or press `Ctrl+R`
 
+#### iOS Setup
+2. **Open in Xcode**
+   - Open Xcode
+   - Select "Open a project or file"
+   - Navigate to the cloned repository and select `ios/pokedex-cuscatlan.xcodeproj`
+
+3. **Build and Run**
+   - Select your target device or simulator
+   - Click the "Run" button or press `Cmd+R`
+
 ## 🐳 Docker Deployment
 
 For production deployment, use the included Dockerfile:
@@ -88,10 +131,10 @@ For production deployment, use the included Dockerfile:
 
 ```bash
 # Build the Docker image
-docker build -t pokemon-trainer-app .
+docker build -t pokemon-cuscatlan .
 
 # Run the container
-docker run -p 8080:80 pokemon-trainer-app
+docker run -p 8080:80 pokemon-cuscatlan
 ```
 
 ### Using Docker Compose
@@ -112,8 +155,8 @@ Access the application at `http://localhost:8080` to download the APK.
 ## 🏗️ Project Structure
 
 ```
-pokemon-trainer-app/
-├── android/
+pokemon-cuscatlan/
+├── android/                       # Android Implementation
 │   ├── app/
 │   │   ├── src/main/java/com/cuscatlan/pokemon/
 │   │   │   ├── data/
@@ -133,8 +176,18 @@ pokemon-trainer-app/
 │   │   └── build.gradle.kts
 │   ├── gradle/
 │   └── build.gradle.kts
-├── Dockerfile
-├── docker-compose.yml
+├── ios/                           # iOS Implementation
+│   ├── pokedex-cuscatlan.xcodeproj
+│   └── pokedex-cuscatlan/
+│       ├── Models/                # Data models
+│       ├── Services/              # Network and repository layer
+│       ├── ViewModels/            # ViewModels
+│       ├── Views/                 # SwiftUI views
+│       ├── Utils/                 # Utility functions
+│       ├── PokedexCuscatlanApp.swift
+│       └── Info.plist
+├── Dockerfile                     # Docker configuration for Android
+├── docker-compose.yml            # Docker Compose setup
 └── README.md
 ```
 
@@ -184,40 +237,60 @@ The app integrates with the [PokéAPI](https://pokeapi.co/) for Pokémon data:
 
 ## 🧪 Testing
 
+### Android
 Run tests with:
 ```bash
+cd android
 ./gradlew test
 ./gradlew connectedAndroidTest
 ```
 
+### iOS
+Run tests with:
+```bash
+cd ios
+xcodebuild test -project pokedex-cuscatlan.xcodeproj -scheme pokedex-cuscatlan -destination 'platform=iOS Simulator,name=iPhone 15'
+```
+
 ## 📱 Supported Features
 
-- ✅ Photo capture and selection
+- ✅ **Platform**: Android and iOS implementations
+- ✅ Photo capture and selection (optional)
 - ✅ Form validation with real-time feedback
-- ✅ DUI format validation and auto-completion
+- ✅ DUI format validation (Android: auto-completion, iOS: numeric validation)
 - ✅ Pokémon search by name or ID
-- ✅ Team selection (max 3 Pokémon)
+- ✅ Team selection (exactly 3 Pokémon)
 - ✅ Statistics display with progress bars
 - ✅ Profile and team editing
-- ✅ Responsive design
+- ✅ Responsive design (Material Design 3 + iOS Design System)
 - ✅ Error handling and retry mechanisms
-- ✅ Docker deployment
+- ✅ Modern navigation (Navigation Compose + NavigationStack)
+- ✅ Docker deployment (Android APK)
 
 ## 🎯 Bonus Features Implemented
 
-- ✅ **Modular Architecture**: Clean separation of concerns
-- ✅ **Dependency Injection**: Hilt implementation
-- ✅ **Docker Support**: Production-ready Dockerfile
-- ✅ **Advanced UI**: Material Design 3 components
-- ✅ **State Management**: Reactive UI with Flows
+- ✅ **Cross-Platform Development**: Both Android and iOS implementations
+- ✅ **Modular Architecture**: Clean separation of concerns on both platforms
+- ✅ **Dependency Injection**: Hilt (Android) + Custom DI (iOS)
+- ✅ **Docker Support**: Production-ready Dockerfile for Android APK distribution
+- ✅ **Advanced UI**: Material Design 3 (Android) + SwiftUI (iOS)
+- ✅ **State Management**: Reactive UI with Flows (Android) + Combine (iOS)
+- ✅ **Modern Navigation**: Navigation Compose (Android) + NavigationStack (iOS)
 
-## 📄 License
+## 🌟 Platform-Specific Features
 
-This project is part of a technical assessment and follows standard software development practices.
+### Android
+- Material Design 3 theming
+- Hilt dependency injection
+- Jetpack Compose UI
+- Navigation Compose
+- Kotlin Flows + StateFlow
 
-## 🤝 Contributing
+### iOS
+- SwiftUI native interface
+- NavigationStack for iOS 16+
+- Combine reactive framework
+- Custom dependency injection
+- Modern iOS design patterns
 
-This is a technical assessment project. For any questions or suggestions, please contact the development team.
-
----
-**Built with ❤️ using Kotlin & Jetpack Compose**# pokedex-cuscatlan
+**Built with ❤️ using Kotlin & Jetpack Compose + Swift & SwiftUI**

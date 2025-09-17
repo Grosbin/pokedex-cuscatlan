@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Permissions for Photo Library -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Esta app necesita acceso a tu biblioteca de fotos para seleccionar una imagen de perfil.</string>
+
+    <!-- Network permissions -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>pokeapi.co</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- App Display Name -->
+    <key>CFBundleDisplayName</key>
+    <string>Pokédx Cuscatlán</string>
+
+    <!-- Minimum iOS Version -->
+    <key>MinimumOSVersion</key>
+    <string>16.0</string>
+</dict>
+</plist>
+
+<!--
+INSTRUCCIONES: Agregar estas claves al archivo Info.plist principal del proyecto
+para habilitar el acceso a la biblioteca de fotos y las conexiones de red a PokeAPI.
+-->

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  pokemon-trainer-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: pokemon-cuscatlan
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    environment:
+      - APP_NAME=Pokémon Cuscatlán
+      - PLATFORM=Android
+
+networks:
+  default:
+    name: pokemon-cuscatlan-network
