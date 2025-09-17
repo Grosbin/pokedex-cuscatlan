@@ -18,7 +18,7 @@ struct PokedexView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // Header with Pokédx logo and greeting
+            // Header with Pokédex logo and greeting
             HStack {
                 HStack {
                     // Pokéball icon
@@ -32,7 +32,7 @@ struct PokedexView: View {
                             .foregroundColor(.white)
                     }
 
-                    Text("Pokédx")
+                    Text("Pokédex")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color(hex: "3B82F6"))

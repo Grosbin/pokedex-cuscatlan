@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("¡Hola! Pokédx Cuscatlán")
+                Text("¡Hola! Pokédex Cuscatlán")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color(hex: "3B82F6"))
@@ -25,7 +25,7 @@ struct ContentView: View {
                     .padding()
 
                 NavigationLink(destination: PokedexView(showingProfile: $showingProfile)) {
-                    Text("Ir al Pokédx")
+                    Text("Ir al Pokédex")
                         .padding()
                         .background(Color(hex: "FFB000"))
                         .foregroundColor(.white)

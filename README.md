@@ -2,6 +2,12 @@
 
 A comprehensive **cross-platform mobile application** with **Android** and **iOS** implementations that allows users to become Pokémon trainers by creating profiles and selecting their team from the first generation of Pokémon.
 
+## 📸 Resultado Visual
+
+Para ver el resultado final de la aplicación con capturas de pantalla y demostración visual del proyecto:
+
+🎯 **[Demo Visual del Proyecto (PDF)](./pokedex-cuscatlan.pdf)**
+
 ## 📱 Platform Support
 
 - **Android**: Built with Kotlin and Jetpack Compose
@@ -188,6 +194,7 @@ pokemon-cuscatlan/
 │       └── Info.plist
 ├── Dockerfile                     # Docker configuration for Android
 ├── docker-compose.yml            # Docker Compose setup
+├── pokedex-cuscatlan.pdf         # Visual demo and screenshots
 └── README.md
 ```
 
@@ -255,7 +262,6 @@ xcodebuild test -project pokedex-cuscatlan.xcodeproj -scheme pokedex-cuscatlan -
 ## 📱 Supported Features
 
 - ✅ **Platform**: Android and iOS implementations
-- ✅ Photo capture and selection (optional)
 - ✅ Form validation with real-time feedback
 - ✅ DUI format validation (Android: auto-completion, iOS: numeric validation)
 - ✅ Pokémon search by name or ID

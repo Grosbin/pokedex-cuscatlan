@@ -75,7 +75,7 @@ fun OptionalTrainerFormScreen(
     ) {
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Header with back button similar to Pokédx
+        // Header with back button similar to Pokédex
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier

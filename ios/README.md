@@ -1,10 +1,10 @@
-# Pokédx Cuscatlán - iOS App
+# Pokédex Cuscatlán - iOS App
 
-Esta es la implementación de iOS de la aplicación Pokédx Cuscatlán, que replica la funcionalidad completa de la versión Android usando SwiftUI.
+Esta es la implementación de iOS de la aplicación Pokédex Cuscatlán, que replica la funcionalidad completa de la versión Android usando SwiftUI.
 
 ## 🚀 Características
 
-### ✨ Pokédx Principal
+### ✨ Pokédex Principal
 - **Diseño idéntico al Android**: Grid de Pokémon con cards redondeadas
 - **Búsqueda en tiempo real**: Por nombre o ID de Pokémon
 - **Carga dinámica**: Imágenes y detalles se cargan según sea necesario
@@ -35,7 +35,7 @@ Esta es la implementación de iOS de la aplicación Pokédx Cuscatlán, que repl
 
 ### 🧭 Navegación Completa
 - **Botones de regreso**: En todas las pantallas con estilo consistente
-- **Flujo lógico**: Pokédx → Perfil → Selección → Visualización
+- **Flujo lógico**: Pokédex → Perfil → Selección → Visualización
 - **Modales**: Presentación nativa de iOS con sheets
 
 ## 🏗️ Arquitectura
@@ -53,7 +53,7 @@ ios/pokedex-cuscatlan/
 │   └── OptionalTrainerFormViewModel.swift # VM para formulario
 ├── Views/
 │   ├── ContentView.swift           # Vista principal con navegación
-│   ├── PokedexView.swift          # Pantalla principal del Pokédx
+│   ├── PokedexView.swift          # Pantalla principal del Pokédex
 │   ├── PokemonDetailView.swift    # Detalle individual de Pokémon
 │   ├── OptionalTrainerFormView.swift # Formulario de perfil
 │   ├── PokemonSelectionView.swift   # Selección de equipo
@@ -79,7 +79,7 @@ ios/pokedex-cuscatlan/
 ## 🎨 Elementos Visuales
 
 ### 🎯 Colores Principales
-- **Azul principal**: `#3B82F6` (Pokédx, iconos)
+- **Azul principal**: `#3B82F6` (Pokédex, iconos)
 - **Amarillo**: `#FFB000` (Búsqueda, botones, selección)
 - **Fondo**: `#F8F8F8` (Fondo general)
 - **Blanco**: Cards y elementos de contenido
@@ -144,7 +144,7 @@ ios/pokedex-cuscatlan/
 ### ▶️ Instrucciones de Ejecución
 1. Seleccionar target de dispositivo (simulador o físico)
 2. Presionar `Cmd + R` para compilar y ejecutar
-3. La app se abrirá en la pantalla principal del Pokédx
+3. La app se abrirá en la pantalla principal del Pokédex
 4. **Nota**: En simulador, la selección de fotos funcionará con la biblioteca simulada
 
 ### 🔧 Solución de Problemas Comunes
@@ -164,7 +164,7 @@ ios/pokedex-cuscatlan/
 ## 🆚 Equivalencia con Android
 
 ### ✅ Funcionalidades Idénticas
-- [x] Pokédx principal con grid y búsqueda
+- [x] Pokédex principal con grid y búsqueda
 - [x] Detalle de Pokémon con estadísticas dinámicas
 - [x] Formulario opcional de perfil de entrenador
 - [x] Selección de equipo Pokémon (máx. 3)
@@ -181,7 +181,7 @@ ios/pokedex-cuscatlan/
 - [x] Estados de carga y error
 
 ### 🔄 Flujo de Navegación
-- [x] Pokédx como pantalla principal
+- [x] Pokédex como pantalla principal
 - [x] Perfil opcional accesible desde header
 - [x] Flujo: Perfil → Selección → Visualización
 - [x] Botones de regreso en todas las pantallas

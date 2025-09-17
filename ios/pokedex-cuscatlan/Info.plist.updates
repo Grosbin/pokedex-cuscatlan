@@ -27,7 +27,7 @@
 
     <!-- App Display Name -->
     <key>CFBundleDisplayName</key>
-    <string>Pokédx Cuscatlán</string>
+    <string>Pokédex Cuscatlán</string>
 
     <!-- Minimum iOS Version -->
     <key>MinimumOSVersion</key>
