@@ -2,11 +2,11 @@
 
 A comprehensive **cross-platform mobile application** with **Android** and **iOS** implementations that allows users to become Pokémon trainers by creating profiles and selecting their team from the first generation of Pokémon.
 
-## 📸 Resultado Visual
+## 📸 Visual Results
 
-Para ver el resultado final de la aplicación con capturas de pantalla y demostración visual del proyecto:
+To see the final application results with screenshots and visual demonstration of the project:
 
-🎯 **[Demo Visual del Proyecto (PDF)](./pokedex-cuscatlan.pdf)**
+🎯 **[Project Visual Demo (PDF)](./pokedex-cuscatlan.pdf)**
 
 ## 📱 Platform Support
 
